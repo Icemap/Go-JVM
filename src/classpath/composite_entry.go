@@ -16,9 +16,9 @@ func newCompositeEntry(pathList string) CompositeEntry {
 	return compositeEntry
 }
 
-func (compositeEntry CompositeEntry) readClass(className string) ([]byte, Entry, error) {
+func (compositeEntry CompositeEntry) ReadClass(className string) ([]byte, Entry, error) {
 	for _, entry := range compositeEntry {
-		data, entryItem, err := entry.readClass(className)
+		data, entryItem, err := entry.ReadClass(className)
 		if err == nil {
 			return data, entryItem, nil
 		}

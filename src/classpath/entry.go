@@ -8,7 +8,7 @@ import (
 const pathListSep = string(os.PathListSeparator)
 
 type Entry interface {
-	readClass(className string) ([]byte, Entry, error)
+	ReadClass(className string) ([]byte, Entry, error)
 	String() string
 }
 

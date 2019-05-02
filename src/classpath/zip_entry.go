@@ -24,7 +24,7 @@ func (zipEntry *ZipEntry) String() string{
 	return zipEntry.absPath
 }
 
-func (zipEntry *ZipEntry) readClass(className string) ([]byte, Entry, error) {
+func (zipEntry *ZipEntry) ReadClass(className string) ([]byte, Entry, error) {
 	// 遍历Zip或Jar内部，寻找class文件
 	reader, err := zip.OpenReader(zipEntry.absPath)
 	if err != nil {
